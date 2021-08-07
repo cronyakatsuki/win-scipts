@@ -21,10 +21,17 @@ Write-Host -ForegroundColor Green "Updating anime downloader from github"
 pip3 install -U git+https://github.com/vn-ki/anime-downloader.git --user
 Write-Host ""
 
+
 Write-Host ""
 Write-Host ""
-Write-Host -ForegroundColor Green "Update flutter"
-flutter upgrade
+Write-Host -ForegroundColor Green "Updating rustup"
+rustup self update
+Write-Host ""
+
+Write-Host ""
+Write-Host ""
+Write-Host -ForegroundColor Green "Updating rust"
+rustup update
 Write-Host ""
 
 Write-Host ""
