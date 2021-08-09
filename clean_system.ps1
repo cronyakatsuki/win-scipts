@@ -32,14 +32,10 @@ if (test-path C:\ProgramData\Microsoft\Windows\WER) {Get-ChildItem -Path C:\Prog
 Write-Host ""
 Write-host -ForegroundColor Green "Removing System and User Temp Files"
 Write-Host ""
-    Write-Host -ForegroundColor Yellow "Removing windir temp"
-    sudo Remove-Item -Path "$env:windir\Temp\*" -Force -Recurse
     Write-Host -ForegroundColor Yellow "Removing windir minidump"
     Remove-Item -Path "$env:windir\minidump\*" -Force -Recurse
     Write-Host -ForegroundColor Yellow "Removing prefetch"
     Remove-Item -Path "$env:windir\Prefetch\*" -Force -Recurse
-    Write-Host -ForegroundColor Yellow "Removing local temp"
-    Remove-Item -Path "C:\Users\*\AppData\Local\Temp\*" -Force -Recurse
     Write-Host -ForegroundColor Yellow "Removing local microsoft junk"
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\WER\*" -Force -Recurse
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\Temporary Internet Files\*" -Force -Recurse
