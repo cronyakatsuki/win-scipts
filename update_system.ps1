@@ -17,25 +17,6 @@ pip freeze | ForEach-Object{$_.split('==')[0]} | ForEach-Object{pip install --up
 
 Write-Host ""
 Write-Host ""
-Write-Host -ForegroundColor Green "Updating anime downloader from github"
-pip3 install -U git+https://github.com/vn-ki/anime-downloader.git --user
-Write-Host ""
-
-
-Write-Host ""
-Write-Host ""
-Write-Host -ForegroundColor Green "Updating rustup"
-rustup self update
-Write-Host ""
-
-Write-Host ""
-Write-Host ""
-Write-Host -ForegroundColor Green "Updating rust"
-rustup update
-Write-Host ""
-
-Write-Host ""
-Write-Host ""
 write-host -ForegroundColor Green "Check for windows updates"
 Write-Host ""
 C:\Windows\System32\control.exe /name Microsoft.WindowsUpdate

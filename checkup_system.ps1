@@ -1,5 +1,5 @@
 Write-Host ""
-Write-Host -ForegroundColor "Malware scan using adwcleaner"
+Write-Host -ForegroundColor Green "Malware scan using adwcleaner"
 Write-Host ""
 
 adwcleaner.exe
