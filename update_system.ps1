@@ -1,13 +1,26 @@
 Write-Host ""
+Write-Host ""
+Write-Host -ForegroundColor Green "Updating chocolatey packages"
+Write-Host ""
+sudo choco upgrade all -y
+
+Write-Host ""
+Write-Host ""
 Write-Host -ForegroundColor Green "Updating scoop packages"
 Write-Host ""
 scoop update *
 
 Write-Host ""
 Write-Host ""
-Write-Host -ForegroundColor Green "Updating chocolatey packages"
+Write-Host -ForegroundColor Green "Updating npm packages"
 Write-Host ""
-sudo choco upgrade all -y
+npm update -g
+
+Write-Host ""
+Write-Host ""
+Write-Host -ForegroundColor Green "Updating python pip"
+Write-Host ""
+C:\users\ivica\appdata\local\programs\python\python39\python.exe -m pip install --upgrade pip
 
 Write-Host ""
 Write-Host ""

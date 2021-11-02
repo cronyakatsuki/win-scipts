@@ -45,6 +45,7 @@ Write-Host ""
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\INetCache\*" -Force -Recurse
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\INetCookies\*" -Force -Recurse
 	Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Terminal Server Client\Cache\*" -Force -Recurse
+	sudo Remove-Item -Path "C:\Temp\*" -Force -Recurse
 
 Write-Host ""
 Write-Host -ForegroundColor Green "Checking Component store size"
