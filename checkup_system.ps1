@@ -1,10 +1,4 @@
 Write-Host ""
-Write-Host -ForegroundColor Green "Malware scan using adwcleaner"
-Write-Host ""
-
-adwcleaner.exe
-
-Write-Host ""
 Write-Host -ForegroundColor Green "Check windows image component store state"
 Write-Host ""
 

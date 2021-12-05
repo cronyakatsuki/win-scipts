@@ -5,6 +5,12 @@ Write-Host ""
 scoop cleanup *
 
 Write-Host ""
+Write-Host -ForegroundColor Green "Cleanup scoop cache"
+Write-Host ""
+
+scoop cache rm *
+
+Write-Host ""
 Write-Host -ForegroundColor Green "Cleaning chocolatey packages"
 Write-Host ""
 
@@ -44,8 +50,10 @@ Write-Host ""
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\IEDownloadHistory\*" -Force -Recurse
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\INetCache\*" -Force -Recurse
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\INetCookies\*" -Force -Recurse
-	Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Terminal Server Client\Cache\*" -Force -Recurse
-	sudo Remove-Item -Path "C:\Temp\*" -Force -Recurse
+	  Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Terminal Server Client\Cache\*" -Force -Recurse
+    Write-Host -ForegroundColor Yellow "Removing temp files"
+	  sudo Remove-Item -Path "C:\Users\*\AppData\Local\Temp" -Force -Recurse
+    sudo Remove-Item -Path "$env:windir\Temp\*" -Force -Recurse
 
 Write-Host ""
 Write-Host -ForegroundColor Green "Checking Component store size"
