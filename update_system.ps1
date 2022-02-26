@@ -20,13 +20,15 @@ Write-Host ""
 Write-Host ""
 Write-Host -ForegroundColor Green "Updating python pip"
 Write-Host ""
-C:\users\ivica\appdata\local\programs\python\python39\python.exe -m pip install --upgrade pip
+python -m pip install --upgrade pip
 
 Write-Host ""
 Write-Host ""
 Write-Host -ForegroundColor Green "Updating python packages"
 Write-Host ""
 pip freeze | ForEach-Object{$_.split('==')[0]} | ForEach-Object{pip install --upgrade $_}
+
+python -m pip install git+https://www.github.com/justfoolingaround/animdl
 
 Write-Host ""
 Write-Host ""

@@ -1,5 +1,7 @@
 ﻿using namespace System.Management.Automation
 
+powerfetch.ps1
+
 Import-Module PSReadLine
 
 $versionMinimum = [Version]'7.1.999'
@@ -90,7 +92,7 @@ function ytvf {
 }
 
 function download {
-    cd ~\Downloads
+    Set-Location ~\Downloads
     aria2c -j 16 -s 16 -x 16 -k 5M --file-allocation=none $args[0] 
 }
 
@@ -102,5 +104,3 @@ Set-Alias -Name ls -Value lsPretty
 Set-Alias -Name grep -Value rg
 Set-Alias -Name ln -Value mklink
 Set-Alias -Name vi -Value nvim-qt
-
-powerfetch.ps1

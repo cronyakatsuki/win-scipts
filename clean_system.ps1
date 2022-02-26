@@ -38,8 +38,6 @@ if (test-path C:\ProgramData\Microsoft\Windows\WER) {Get-ChildItem -Path C:\Prog
 Write-Host ""
 Write-host -ForegroundColor Green "Removing System and User Temp Files"
 Write-Host ""
-    Write-Host -ForegroundColor Yellow "Removing windir minidump"
-    Remove-Item -Path "$env:windir\minidump\*" -Force -Recurse
     Write-Host -ForegroundColor Yellow "Removing prefetch"
     Remove-Item -Path "$env:windir\Prefetch\*" -Force -Recurse
     Write-Host -ForegroundColor Yellow "Removing local microsoft junk"
@@ -50,9 +48,9 @@ Write-Host ""
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\IEDownloadHistory\*" -Force -Recurse
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\INetCache\*" -Force -Recurse
     Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Windows\INetCookies\*" -Force -Recurse
-	  Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Terminal Server Client\Cache\*" -Force -Recurse
+	Remove-Item -Path "C:\Users\*\AppData\Local\Microsoft\Terminal Server Client\Cache\*" -Force -Recurse
     Write-Host -ForegroundColor Yellow "Removing temp files"
-	  sudo Remove-Item -Path "C:\Users\*\AppData\Local\Temp" -Force -Recurse
+	sudo Remove-Item -Path "C:\Users\*\AppData\Local\Temp" -Force -Recurse
     sudo Remove-Item -Path "$env:windir\Temp\*" -Force -Recurse
 
 Write-Host ""

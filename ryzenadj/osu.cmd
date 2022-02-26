@@ -1,2 +1,2 @@
 @echo off
-ryzenadj --slow-time=30 --vrmmax-current=45000 --tctl-temp=75 --stapm-limit=12000 --stapm-time=300 --fast-limit=15000 --slow-limit=13000 --max-performance
+ryzenadj --slow-time=30 --vrmmax-current=70000 --tctl-temp=90 --stapm-limit=35000 --stapm-time=300 --fast-limit=35000 --slow-limit=35000 --max-performance
